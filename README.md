@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @hawkinswinja
-- 👀 I’m interested in software development
+- 👀 A Software Backend Developer in Python and NodeJS
 - 🌱 I’m currently studying Computer Technology with focus on Software Engineering 
 - 💞️ I’m looking to improve my foundation in Devops 
 - 📫 You can reach me at hawkinswinja@gmail.com for project collaborations
