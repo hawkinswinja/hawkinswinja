@@ -1,67 +1,436 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Gilbert Winja Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GHW Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#banner">Home</a></li>
+    <nav id="desktop-nav">
+      <div class="logo">Gilbert Winja</div>
+      <div>
+        <ul class="nav-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="https://drive.google.com/file/d/1vbruKNQE6qbjHjKyiQt9VihlWmj91zcO/view?usp=sharing">Resume</a></li>
         </ul>
-      </nav>
-    </header>
-    <section id="banner">
-      <h1>Gilbert Hawkins Winja</h1>
-      <p>Software Engineer</p>
-      <p>Take a look at my projects and reach out to discuss career or collaboration opportunities.</p>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Gilbert Winja</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <!-- <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpg" alt="Hawkinsw Winja profile picture" />
+      </div> -->
+      <div class="section__pic-container">
+          <img
+            src="./assets/profile-pic.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Gilbert Winja</h1>
+        <p class="section__text__p2">Software Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('https://drive.google.com/file/d/1rXtI7lA_baX23yuBAD2n_ZjGGIo7bnVa/view?usp=share_link', '_blank')"
+          >
+            View Resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="window.open('https://www.linkedin.com/in/hawkinswinja', '_blank')"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="window.open('https://github.com/hawkinswinja', '_blank')"
+          />
+        </div>
+      </div>
     </section>
     <section id="about">
-      <h2>About Me</h2>
-      <p>Winja is an aspiring software engineer passionate about technology with a focus on software, and also exploring with AI.
-        He is currently specializing in Backend to develop efficient, reliable and secure software solutions.<br>
-        He lives in Nairobi, Kenya, where he is a student at the Jomo Kenyatta University (JKUAT) pursuing Computer Technology.
-        Winja is a problem solver, innovative, a fast learner and a team player.
-        He is also self driven with a proven track record of delivering quality results and exceeding expectations.
-       </p>
-       <p>During his free time, he enjoys playing football, exploring different cultures, site seeing and is also a fan of humor</p>
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <!-- <div class="section__pic-container">
+          <img
+            src="./assets/profile-pic.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div> -->
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>Upto 2 years <br />Software Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Computer Technology</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I’m a software engineer specializing in building custom solutions using technologies such as Python. <br>
+              My experience includes building and designing backend systems, and DevOps to improve the process of quality software delivery.
+              I enjoy opportunities that challenge me to learn, grow, and also engage in the vast tech space discussions.
+              When not writng code or designing architectures, I am cheering my local team at the stadium
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      /> -->
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <!-- <p>Experienced</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <!-- <p>Experienced</p> -->
+                </div>
+              </article>
+              <!-- <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article> -->
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+              <!-- <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article> -->
+              <!-- <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article> -->
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <!-- <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article> -->
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Django|Flask</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+              <!-- <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Flask</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article> -->
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL, SQL, Mongo</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Docker</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+  
+          </div>
+          </div>
+          <!-- <div class="details-container">
+            <h2 class="experience-sub-title">DevOps</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Docker</h3>
+                    <p>Intermediate</p>
+                  </div>
+              </article>
+            </div>
+          </div> -->
+      </div>
+      <!-- <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      /> -->
     </section>
     <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <h3>iKURA voting platform</h3>
-          <p>iKURA voting system is an online system that allows institutions to conduct elections online allowing students ot vote remotely and the results updated in real time. The system is designed for use in institutions of higher learning. 
-            This system allows for voter authentication based on stored data, fast voting process with easy to use interface, and real time votes updates.
-            The project's technology stack involves html, CSS, and JavaScript for the frontend build. The Backend used python-flask framework and sqlalchemy for database storage.
-        </p>
-            <p>Working on this project was a learning experience of processes involved in conceptualizing an idea to deploying the product.
-                Checkout this <a href="https://www.linkedin.com/pulse/working-my-first-project-gilbert-winja">Linkedin blogpost</a> which I detail the project experience.
-            </p>
-          <a href="https://hawkinswinja.github.io/evoting">View Project Landing page</a><br><br>
-          <a href="https://github.com/hawkinswinja/evoting">iKURA repo</a>
-        </li>
-        <li>
-          <h3>AirBnB Clone</h3>
-          <p>AirBnB clone is a replication of the AirBnB platform with similar user functionalities. Users can browse through the list of available listed places and their pricings.<br>
-            the tech stack involves the classic html, CSS, and JavaScript for frontend and python-flask for backend. The project was done through collaboration with different peers for each iteration</p>
-            <a href="https://github.com/hawkinswinja/AirBnB_clone_v4">AirBnB_clone repo</a>
-        </li>
-      </ul>
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Player-Manager</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/hawkinswinja/player-manager', '_blank')"
+              >
+                Github
+              </button>
+              <!-- <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button> -->
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Lipa Fees WhatsappBot</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/hawkinswinja/lipa_fees', '_blank')"
+              >
+                Github
+              </button>
+              <!-- <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button> -->
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.jpg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">MiniBlogging API</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/hawkinswinja/MiniBloggingApp-test', '_blank')"
+              >
+                Github
+              </button>
+              <!-- <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      /> -->
     </section>
     <section id="contact">
-      <h2>Contact Me</h2>
-      <a href="mailto:hawkinswinja@gmail.com">Email me</a>
-      <a href="https://linkedin.com/in/hawkinswinja">View my linkedin</a>
-      <a href="https://github.com/hawkinswinja">View my Github</a>
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:hawkinswinja@gmail.com">hawkinswinja@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/hawkinswinja">Connect on LinkedIn</a></p>
+        </div>
+      </div>
     </section>
     <footer>
-      <p>Copyright © 2023 Gilbert Winja</p>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &copy; 2023 Gilbert Winja. All Rights Reserved.</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
