@@ -18,10 +18,11 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
         
-    - name: test aws cli
-      run: aws s3 ls
-      # env:
-      #   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #   AWS_DEFAULT_REGION: us-east-1
-      #   AWS_DEFAULT_OUTPUT: json
+    - name: Deploy latest changes
+      working-directory: portfolio
+      run: |
+        ls
+        aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET }}
+
+    - name: Invalidate cdn files
+      run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/*"
