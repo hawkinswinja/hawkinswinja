@@ -2,10 +2,8 @@ name: Upload Website
 
 on:
   push:
-    branches:
-    - master
-    paths:
-    - profile
+    paths-ignore:
+      - 'README.md'
 
 jobs:
   deploy:
