@@ -1,8 +1,8 @@
-- 👋 Hi, I’m @hawkinswinja
-- 👀 A Software Backend Developer in Python and NodeJS
-- 🌱 I’m currently studying Computer Technology with focus on Software Engineering 
-- 💞️ I’m looking to improve my foundation in Devops 
-- 📫 You can reach me at hawkinswinja@gmail.com for project collaborations
+- 👋 Hi, I’m Gilbert Winja
+- 👀 My day to day is DevOps grounded, basically freeing devs from operation workloads
+- 🌱 I sometimes write code, mostly for automation.
+- 💞️ Currently focused on observability 
+- 📫 Reach me at hawkinswinja@gmail.com to chat anything technology
 
 <!---
 hawkinswinja/hawkinswinja is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
